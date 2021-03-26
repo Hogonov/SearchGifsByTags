@@ -52,7 +52,7 @@ const App: React.FunctionComponent = () => {
                 arr.push({tag: randStr, url: result.data.image_url})
                 setImages(arr)
             } else {
-                toast(`Картинка по тегу \"${randStr}\" не найдена`)
+                toast(`Картинка по тегу ${randStr} не найдена`)
             }
 
         } catch (e) {
@@ -93,7 +93,7 @@ const App: React.FunctionComponent = () => {
                                     arr.push({tag: tag, url: result.data.image_url})
                                     setImages(arr)
                                 } else {
-                                    toast(`Картинка по тегу \"${tag}\" не найдена`)
+                                    toast(`Картинка по тегу ${tag} не найдена`)
                                 }
                             }
                         } else {
@@ -104,7 +104,7 @@ const App: React.FunctionComponent = () => {
                                 if (result.data.length !== 0) {
                                     url += `${result.data.image_url}%%&%%`
                                 } else {
-                                    toast(`Картинка по тегу \"${query}\" в запросе ${tag} не найдена`)
+                                    toast(`Картинка по тегу ${query} в запросе ${tag} не найдена`)
                                 }
                             }
                             let arr = images.slice();
